@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.4" PrivateAssets="all" />
+    <PackageReference Include="Sentry.AspNetCore.Blazor.WebAssembly" Version="5.8.0" />
+  </ItemGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <!-- TODO: Replace these accordingly -->
+    <SentryOrg>MY-SENTRY-ORG</SentryOrg>
+    <SentryProject>MY-SENTRY-PROJECT</SentryProject>
+    <SentryAuthToken>MY-SENTRY-AUTH-TOKEN</SentryAuthToken>
+
+    <!-- Leave this one alone -->
+    <SentryUploadSymbols>true</SentryUploadSymbols>
+  </PropertyGroup>
+
+</Project>
